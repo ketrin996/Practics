@@ -16,11 +16,11 @@ public class Main {
 
     public static void sort(String[] args) {
         for (int i = 0; i <= args.length - 1; i++) {
-            for (int j = 1; j < args.length; j++) {
-                int comp = args[j].compareTo(args[i]);
-                if (comp < 0) {
+            for (int j = 1+i; j < args.length; j++) {
+
+                if (args[j].compareTo(args[i]) < 0) {
                     String temp = args[i];
-                    args[i]=args[j];
+                    args[i] = args[j];
                     args[j] = temp;
                 }
             }
